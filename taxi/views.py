@@ -79,6 +79,7 @@ class CarRemoveDriverView(LoginRequiredMixin, generic.View):
         car.drivers.remove(request.user)
         return redirect("taxi:car-detail", pk=car.pk)
 
+
 class CarCreateView(LoginRequiredMixin, generic.CreateView):
     model = Car
     fields = CarForm

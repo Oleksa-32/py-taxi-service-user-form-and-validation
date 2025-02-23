@@ -64,12 +64,3 @@ class DriverCreationForm(UserCreationForm):
             "first_name",
             "last_name",
         )
-
-
-class CarForm(UserCreationForm):
-    class Meta:
-        model = Car
-        fields = "__all__"
-        widgets = {
-            "drivers": forms.CheckboxSelectMultiple()
-        }
