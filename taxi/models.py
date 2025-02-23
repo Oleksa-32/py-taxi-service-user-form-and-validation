@@ -30,7 +30,7 @@ class Driver(AbstractUser):
             raise ValidationError(
                 "Licence number must have 3 first uppercase letters"
             )
-        if not license_number[3:].isdigit():
+        if not license_number[-5:].isdigit():
             raise ValidationError("Licence number must have 5 last digits")
 
     class Meta:
